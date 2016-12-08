@@ -44,7 +44,7 @@ public:
 		\pre El parametro implicito no contiene ninguna variable con el NOMBRE de var
 		\post Se ha anadido la variable var al parametro implicito
 	*/
-	void anadir_variable(const pair<string,int>& var);
+	void anadir_variable(const std::pair<std::string,int>& var);
 
 	/** @brief Modifica una operacion existente
 		\pre Existe una operacion en el parametro implicito con el NOMBRE de op
@@ -56,7 +56,7 @@ public:
 		\pre Existe una variable en el parametro implicito con el NOMBRE de var
 		\post La variable del parametro implicito original con el NOMBRE de var, ha quedado sustituido por var
 	*/
-	void modificar_variable(const pair<string,int>& var);
+	void modificar_variable(const std::pair<std::string,int>& var);
 
 	/** @brief Inicializa las operaciones primitivas
 		\pre <em>cierto</em>
@@ -70,13 +70,13 @@ public:
 		\pre <em>cierto</em>
 		\post El resultado indica si existe la operacion en el parametro implicito con NOMBRE = nombre 
 	*/
-	bool existe_operacion(string nombre) const;
+	bool existe_operacion(std::string nombre) const;
 
 	/** @brief Consultora de la existencia de la variable
 		\pre <em>cierto</em>
 		\post El resultado indica si existe una variable en el parametro implicito con NOMBRE = nombre
 	*/
-	bool existe_variable(string nombre) const;
+	bool existe_variable(std::string nombre) const;
 
 	/** @brief Consultora del numero de operaciones del entorno
 		\pre <em>cierto</em>
@@ -94,13 +94,13 @@ public:
 		\pre Existe una operacion en el parametro implicito con NOMBRE = nombre
 		\post El resultado es la operacion con NOMBRE = nombre que contiene el parametro implicito
 	*/
-	Operacion consultar_operacion(string nombre);
+	Operacion consultar_operacion(std::string nombre);
 
 	/** @brief Consultora de la variable del entorno
 		\pre Existe una variable en el parametro implicito con NOMBRE = nombre
 		\post El resultado es la variable con NOMBRE = nombre que contiene el parametro implicito
 	*/
-	pair<string,int> consultar_variable(string nombre);
+	std::pair<std::string,int> consultar_variable(std::string nombre);
 
 private:
 
@@ -110,8 +110,8 @@ private:
 
 	// Atributos
 
-	list<Operacion> operaciones;
-	list<pair<string,int> > variables;
+	std::list<Operacion> operaciones;
+	std::list<std::pair<std::string,int> > variables;
 
 };
 #endif

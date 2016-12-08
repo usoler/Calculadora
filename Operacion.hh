@@ -17,7 +17,7 @@
 
 class Operacion{
 
-public:
+public:	
 	// Constructoras
 
 	/** @brief Creadora por defecto.
@@ -33,7 +33,7 @@ public:
 		\pre <em>cierto</em>
 		\post El resultado es una operacion con NOMBRE = nombre, EXPRESION = expresion i VARIABLES = variables
 	*/
-	Operacion(string nombre, string expresion, list<string> variables);
+	Operacion(std::string nombre, std::string expresion, std::list<std::string> variables);
 
 	// Destructores
 
@@ -47,7 +47,7 @@ public:
 		\pre <em>cierto</em>
 		\post El resultado de resolver la operacion
 	*/
-	string calcular_operacion();
+	std::string calcular_operacion(std::list<std::string> datos);
 
 	// Consultores
 
@@ -55,13 +55,13 @@ public:
 		\pre <em>cierto</em>
 		\post El resultado es el NOMBRE del parametro implicito
 	*/
-	string consultar_nombre() const;
+	std::string consultar_nombre() const;
 
 	/** Consultora de la expresion
 		\pre <em>cierto</em>
 		\post El resultado es la EXPRESION del parametro implicito
 	*/
-	string consultar_expresion() const;
+	std::string consultar_expresion() const;
 
 	/** Consultora del numero de variables
 		\pre <em>cierto</em>
@@ -78,8 +78,8 @@ private:
 
 	// Atributos
 
-	string nombre;
-	string expresion;
-	list<string> variables;
+	std::string nombre;
+	std::string expresion;
+	std::list<std::string> variables;
 };
 #endif

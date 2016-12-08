@@ -1,5 +1,7 @@
 #include "Operacion.hh"
 
+using namespace std;
+
 Operacion::Operacion(){}
 
 Operacion::Operacion(string nombre, string expresion, list<string> variables){
@@ -29,14 +31,14 @@ string Operacion::calcular_operacion(list<string> datos){
 	return res;
 }
 
-string Operacion::consultar_nombre(){
+string Operacion::consultar_nombre() const{
 	return this->nombre;
 }
 
-string Operacion::consultar_expresion(){
+string Operacion::consultar_expresion() const{
 	return this->expresion;
 }
 
-int Operacion::consultar_numero_variables(){
+int Operacion::consultar_numero_variables() const{
 	return (this->variables).size();
 }
